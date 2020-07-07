@@ -24,31 +24,42 @@ SELECT quote
 FROM quotes
 WHERE author_last_name = 'Adams';
 
--- TODO TOGETHER: View quotes by Douglas Adams. Add a caption
+-- TODOne TOGETHER: View quotes by Douglas Adams. Add a caption
 
 -- instead of the normal header one is defined here
 SELECT quote AS 'Douglas Adams Quotes' FROM quotes WHERE author_last_name = 'Adams';
 
--- TODO TOGETHER: View quote with primary key (in this case id) of 5
+-- TODOne TOGETHER: View quote with primary key (in this case id) of 5
+SELECT * FROM quotes WHERE id = 5;
 
--- TODO TOGETHER: Select all from quotes where quote contains(is like) "the"
-
+-- TODOne TOGETHER: Select all from quotes where quote contains(is like) "the"
+SELECT * FROM quotes WHERE quotes LIKE '%the%';
 
 
 
 
 /*********************** UPDATE ***********************/
--- TODO TOGETHER: View all quotes
+-- TODOne TOGETHER: View all quotes
 
 
--- TODO TOGETHER: Update quote 4 to first name = Samuel and last name = Clemens
+-- TODOne TOGETHER: Update quote 4 to first name = Samuel and last name = Clemens
+SELECT * from quotes where id = 4;
+SELECT author_first_name, author_last_name from quotes where id = 4;
+
+UPDATE quotes SET author_first_name = 'Samuel', author_last_name = 'Clemens' where id = 4;
+
 
 /*********************** DELETE ***********************/
 
--- TODO TOGETHER: Delete quote with id 3. Then view the output.
+-- TODOne TOGETHER: Delete quote with id 3. Then view the output.
 
+SELECT * from quotes where id = 3;
+DELETE from quotes where id = 3;
 
 
 /*********************** TRUNCATE ***********************/
--- TODO TOGETHER: Truncate quotes table.... there is no going back! Deletes all records.
+-- TODOne TOGETHER: Truncate quotes table.... there is no going back! Deletes all records.
 
+TRUNCATE quotes;
+
+-- uncomment truncate in seeder to see how it adds instead of replacing
