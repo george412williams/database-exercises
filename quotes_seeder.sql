@@ -14,7 +14,8 @@ VALUES  ('Douglas', 'Adams', 'Don''t panic'),
         ('Douglas', 'Adams', 'Time is an illusion. Lunchtime doubly so.'),
         ('Mark', 'Twain', 'Clothes make the man. Naked people have little or no influence on society.'),
         ('Kurt', 'Vonnegut', 'The universe is a big place, perhaps the biggest.'),
-        ('Cormac', 'McCarthy', 'Even when you know you don''t know');
+        ('Cormac', 'McCarthy', 'Even when you know you don''t know'),
+        ('John', 'Cleese', 'Would you like the crouton or the entire caesar salad?');
 
 # This is an example of a default value being added
 INSERT INTO quotes (author_first_name, author_last_name, quote)
