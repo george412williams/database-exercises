@@ -18,6 +18,7 @@ select * from employees where last_name like '%q%' ;
     #refactor; 1 done; 2 limit to male? 441;
 select * from employees where last_name like '%E%';
     # 3b last name starts or ends w 'E' 30723;
+select * from employees where (last_name like 'E%') and (last_name like '%E');
         # 4 dupe and update it find last name starts and ends w E 899;
         # 5 make another to show hired in 90s and born on xmas 362;
         # 6 make another to find last names w a q but not any qu's 547;

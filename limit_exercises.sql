@@ -6,7 +6,7 @@ SELECT DISTINCT title FROM titles;
 
 #update xmas 90s quer from order by find just first 5 emps
 
-#update query to find the tenth page of results in sets a 5 names per page
+#update query to find the tenth page of results in sets a 5 names per page offset 45
 
 
 #q; what is the rel btwn offset (# results to skip, limit (num of relsut per page) and page number?
