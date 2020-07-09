@@ -15,7 +15,7 @@ select * from employees where birth_date like '19%%-12-25';
     #3 135214
 
 
-select * from employees where last_name like '%q%' ;
+select * from employees where last_name like '%q%';
     #5 1873
 
 select * from employees where last_name like 'E%E';
@@ -24,6 +24,7 @@ select * from employees where (last_name like 'E%') and (last_name like '%E');
 
 select * from employees where birth_date like '19%%-12-25' and hire_date like '199%';
 
-        # 6 547;
+select * from employees where last_name like '%q%' and last_name not like '%qu%';
+
 
 
