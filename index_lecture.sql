@@ -116,6 +116,7 @@ create table owners (
     name varchar(30) not null,
     address varchar(255) default 'undisclosed'
 );
+#truncate owners;
 insert into owners (name, address) values ('bill', 'the death star');
 insert into owners (name, address) values ('jim', 'the real star');
 insert into owners (name, address) values ('guy', 'dwarf star');
@@ -144,3 +145,19 @@ select * from owners;
 
 describe titles;
 
+show index from owners;
+
+#alter table owners drop index owner_id;
+
+DROP TABLE IF EXISTS albums;
+
+CREATE TABLE IF NOT EXISTS albums(
+id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+artist VARCHAR(128) DEFAULT 'UNKNOWN',
+name VARCHAR(128) NOT NULL,
+release_date SMALLINT UNSIGNED,
+genre VARCHAR(128),
+sales FLOAT,
+PRIMARY KEY (id),
+UNIQUE unique_artist_album (artist, name)
+);
