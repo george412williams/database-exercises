@@ -141,3 +141,6 @@ describe pets;
 select * from pets;
 
 select * from owners;
+
+describe titles;
+
