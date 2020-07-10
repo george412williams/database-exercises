@@ -37,6 +37,14 @@ join titles on titles.emp_no = dept_emp.emp_no
 where departments.dept_name = 'customer service' and titles.to_date = '9999-01-01' and dept_emp.to_date = '9999-01-01'
 group by Title;
 
+# attempting backwards:
+# select titles.title as Title, ' ', count(dept_emp.emp_no) as Count
+# from departments
+# join dept_emp on dept_emp.dept_no = titles.emp_no
+# join departments on dept_emp.dept_no = departments.dept_no
+# where deparments.dept_name = 'Customer Service' and titles.to_date = '9999-01-01' and dept_emp.to_date = '9999-01-01'
+# group by Title;
+
 #Find the current salary of all current managers.
     #start w dept and their names first then current mngrs and then to salaries
     #joining on deptno
